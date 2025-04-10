@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Update Entry</title></head>
+<body>
+  <h2>Update Weather Entry</h2>
+  <form action="/update/{{ record[0] }}" method="post">
+    Location: <input type="text" name="location" value="{{ record[1] }}"><br>
+    Date Range: <input type="text" name="date_range" value="{{ record[2] }}"><br>
+    <button type="submit">Update</button>
+  </form>
+  <br>
+  <a href="/history">Cancel</a>
+</body>
+</html>
+

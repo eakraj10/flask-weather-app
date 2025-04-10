@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head><title>Weather History</title></head>
+<body>
+  <h2>Stored Weather Data</h2>
+  <table border="1">
+    <tr>
+      <th>ID</th>
+      <th>Location</th>
+      <th>Date Range</th>
+      <th>Weather</th>
+      <th>Actions</th>
+    </tr>
+    {% for record in records %}
+    <tr>
+      <td>{{ record.id }}</td>
+      <td>{{ record.location }}</td>
+      <td>{{ record.date_range }}</td>
+      <td>
+        {{ record.condition }}<br>
+        {{ record.temp }} °C<br>
+        {{ record.humidity }}% Humidity
+      </td>
+      <td>
+        <a href="/update/{{ record.id }}">Update</a> |
+        <a href="/delete/{{ record.id }}">Delete</a>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+  <br>
+  <a href="/">Back to Input</a> | <a href="/export">Export JSON</a>
+</body>
+</html>
+

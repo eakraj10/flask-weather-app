@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Weather App</title></head>
+<body>
+  <h2>Enter Location and Date Range</h2>
+  <form action="/get_weather" method="post">
+    Location: <input type="text" name="location" required><br>
+    Date Range: <input type="text" name="date_range" required><br>
+    <button type="submit">Get Weather</button>
+  </form>
+  <br>
+  <a href="/history">View Weather History</a> | <a href="/info">About PMA</a>
+</body>
+</html>
+

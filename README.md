@@ -57,7 +57,8 @@ pip install -r requirements.txt
 python app.py
 ```
 
-API_KEY = "your_actual_api_key_here"
+API_KEY = "695612f24ea951bbbc7c5dd8e52a5fcd"
+
 
 ---
 

@@ -1,15 +1,22 @@
+<!-- templates/index.html -->
 <!DOCTYPE html>
-<html>
-<head><title>Weather App</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Search</title>
+</head>
 <body>
-  <h2>Enter Location and Date Range</h2>
-  <form action="/get_weather" method="post">
-    Location: <input type="text" name="location" required><br>
-    Date Range: <input type="text" name="date_range" required><br>
-    <button type="submit">Get Weather</button>
-  </form>
-  <br>
-  <a href="/history">View Weather History</a> | <a href="/info">About PMA</a>
+    <h1>Weather App by Eakraj Raut</h1>
+    <p><a href="https://www.linkedin.com/school/pmaccelerator/" target="_blank">About PM Accelerator</a></p>
+    <form action="/get_weather" method="post">
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required>
+        <br>
+        <label for="date_range">Date Range:</label>
+        <input type="text" id="date_range" name="date_range">
+        <br>
+        <button type="submit">Get Weather</button>
+    </form>
+    <p><a href="/history">View Saved Weather Data</a></p>
 </body>
 </html>
-

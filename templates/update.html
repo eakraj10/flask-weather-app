@@ -1,15 +1,22 @@
+<!-- templates/update.html -->
 <!DOCTYPE html>
-<html>
-<head><title>Update Entry</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Weather Entry</title>
+</head>
 <body>
-  <h2>Update Weather Entry</h2>
-  <form action="/update/{{ record[0] }}" method="post">
-    Location: <input type="text" name="location" value="{{ record[1] }}"><br>
-    Date Range: <input type="text" name="date_range" value="{{ record[2] }}"><br>
-    <button type="submit">Update</button>
-  </form>
-  <br>
-  <a href="/history">Cancel</a>
+    <h1>Update Weather Entry</h1>
+    <form method="post">
+        <label for="location">Location:</label>
+        <input type="text" name="location" value="{{ record[1] }}" required>
+        <br>
+        <label for="date_range">Date Range:</label>
+        <input type="text" name="date_range" value="{{ record[2] }}">
+        <br>
+        <input type="submit" value="Update">
+    </form>
+    <p><a href="/history">Cancel and Return</a></p>
 </body>
 </html>
 

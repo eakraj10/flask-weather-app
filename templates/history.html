@@ -1,35 +1,38 @@
+<!-- templates/history.html -->
 <!DOCTYPE html>
-<html>
-<head><title>Weather History</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stored Weather Data</title>
+</head>
 <body>
-  <h2>Stored Weather Data</h2>
-  <table border="1">
-    <tr>
-      <th>ID</th>
-      <th>Location</th>
-      <th>Date Range</th>
-      <th>Weather</th>
-      <th>Actions</th>
-    </tr>
-    {% for record in records %}
-    <tr>
-      <td>{{ record.id }}</td>
-      <td>{{ record.location }}</td>
-      <td>{{ record.date_range }}</td>
-      <td>
-        {{ record.condition }}<br>
-        {{ record.temp }} °C<br>
-        {{ record.humidity }}% Humidity
-      </td>
-      <td>
-        <a href="/update/{{ record.id }}">Update</a> |
-        <a href="/delete/{{ record.id }}">Delete</a>
-      </td>
-    </tr>
-    {% endfor %}
-  </table>
-  <br>
-  <a href="/">Back to Input</a> | <a href="/export">Export JSON</a>
+    <h1>Stored Weather Data</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Location</th>
+            <th>Date Range</th>
+            <th>Temperature (C)</th>
+            <th>Temperature (F)</th>
+            <th>Description</th>
+            <th>Actions</th>
+        </tr>
+        {% for row in records %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }} °C</td>
+            <td>{{ row[4] }} °F</td>
+            <td>{{ row[5] }}</td>
+            <td>
+                <a href="/update/{{ row[0] }}">Update</a> |
+                <a href="/delete/{{ row[0] }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <p><a href="/">Back to Input</a> | <a href="/export">Export JSON</a></p>
 </body>
 </html>
 

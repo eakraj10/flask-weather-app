@@ -1,31 +1,37 @@
 # Flask Weather App
 
-This project is a full-stack weather tracking web application built using Python and Flask. It was created for the PM Accelerator AI/ML Internship Technical Assessment.
+This is a full-stack weather tracking web application built with Python, Flask, and the OpenWeatherMap API. It was created as part of the PM Accelerator AI/ML Internship Technical Assessment.
 
-The app allows users to search for real-time weather data using the OpenWeatherMap API and store the results in a local SQLite database. Users can manage their entries through a full CRUD (Create, Read, Update, Delete) interface, and also export stored data as JSON.
+The app allows users to:
 
----
+- Search for real-time weather data by location (city or ZIP code)
+- View temperatures in both Celsius and Fahrenheit
+- Store searches in a SQLite database
+- Update or delete stored records
+- Export weather history as JSON
+- View all search history
+- See additional app and author information through a footer button
+
 
 ## Features
 
-- Search weather by city or location using OpenWeatherMap API
-- Save location and custom date range input to local database
+- Search for weather by city or ZIP code using the OpenWeatherMap API
+- Save location and custom date range input to a local database
 - View full history of saved searches
 - Edit or delete existing weather records
-- Export entire weather history as a JSON endpoint
-- Informational route with PM Accelerator company link
-- All features implemented using clean Flask and Jinja2 templates
+- Export entire weather history as a JSON file
+- Informational route linking to the PM Accelerator company page
+- All features implemented using Flask, Jinja2, and clean HTML templates
 
----
 
 ## Technologies Used
 
 - Python 3
 - Flask
-- HTML (Jinja2 Templates)
-- SQLite (via `sqlite3`)
+- SQLite
+- HTML/CSS
 - OpenWeatherMap API
-- CSS (basic styling)
+- Jinja2 Templates
 
 ---
 
